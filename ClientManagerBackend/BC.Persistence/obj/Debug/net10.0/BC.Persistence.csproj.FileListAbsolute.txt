@@ -1,0 +1,12 @@
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.Persistence\obj\Debug\net10.0\BC.Persistence.csproj.AssemblyReference.cache
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.Persistence\obj\Debug\net10.0\BC.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.Persistence\obj\Debug\net10.0\BC.Persistence.AssemblyInfoInputs.cache
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.Persistence\obj\Debug\net10.0\BC.Persistence.AssemblyInfo.cs
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.Persistence\obj\Debug\net10.0\BC.Persistence.csproj.CoreCompileInputs.cache
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.Persistence\bin\Debug\net10.0\BC.Persistence.deps.json
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.Persistence\bin\Debug\net10.0\BC.Persistence.dll
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.Persistence\bin\Debug\net10.0\BC.Persistence.pdb
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.Persistence\obj\Debug\net10.0\BC.Persistence.dll
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.Persistence\obj\Debug\net10.0\refint\BC.Persistence.dll
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.Persistence\obj\Debug\net10.0\BC.Persistence.pdb
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.Persistence\obj\Debug\net10.0\ref\BC.Persistence.dll

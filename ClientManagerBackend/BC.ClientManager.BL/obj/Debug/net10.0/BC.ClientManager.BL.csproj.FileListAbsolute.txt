@@ -1,0 +1,15 @@
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.ClientManager.BL\bin\Debug\net10.0\BC.ClientManager.BL.deps.json
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.ClientManager.BL\bin\Debug\net10.0\BC.ClientManager.BL.dll
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.ClientManager.BL\bin\Debug\net10.0\BC.ClientManager.BL.pdb
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.ClientManager.BL\bin\Debug\net10.0\BC.Persistence.dll
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.ClientManager.BL\bin\Debug\net10.0\BC.Persistence.pdb
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.ClientManager.BL\obj\Debug\net10.0\BC.ClientManager.BL.csproj.AssemblyReference.cache
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.ClientManager.BL\obj\Debug\net10.0\BC.ClientManager.BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.ClientManager.BL\obj\Debug\net10.0\BC.ClientManager.BL.AssemblyInfoInputs.cache
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.ClientManager.BL\obj\Debug\net10.0\BC.ClientManager.BL.AssemblyInfo.cs
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.ClientManager.BL\obj\Debug\net10.0\BC.ClientManager.BL.csproj.CoreCompileInputs.cache
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.ClientManager.BL\obj\Debug\net10.0\BC.Clien.E7EB875E.Up2Date
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.ClientManager.BL\obj\Debug\net10.0\BC.ClientManager.BL.dll
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.ClientManager.BL\obj\Debug\net10.0\refint\BC.ClientManager.BL.dll
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.ClientManager.BL\obj\Debug\net10.0\BC.ClientManager.BL.pdb
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.ClientManager.BL\obj\Debug\net10.0\ref\BC.ClientManager.BL.dll

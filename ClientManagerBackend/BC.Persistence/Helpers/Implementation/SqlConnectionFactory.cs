@@ -1,0 +1,13 @@
+﻿using BC.Persistence.Helpers.Interface;
+using Microsoft.Data.SqlClient;
+using System.Data;
+
+namespace BC.Persistence.Helpers.Implementation
+{
+    public class SqlConnectionFactory : IDbConnectionFactory
+    {
+        private readonly string _connectionString;
+        public SqlConnectionFactory(string connectionString) => _connectionString = connectionString;
+        public IDbConnection CreateConnection() => new SqlConnection(_connectionString);
+    }
+}

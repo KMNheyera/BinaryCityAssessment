@@ -17,6 +17,7 @@ namespace BC.ClientManager.BL.Repository.Impementation
             _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
         }
 
+        #region Public Members
         public async Task<Contact> CreateContactAsync(CreateContactDto createContactDto, CancellationToken ct = default)
         {
             if (string.IsNullOrWhiteSpace(createContactDto.Name)) throw new ArgumentException("Name is required", nameof(createContactDto.Name));
@@ -85,6 +86,7 @@ namespace BC.ClientManager.BL.Repository.Impementation
 
             return results;
         }
+        #endregion
     }
 }
 

@@ -13,3 +13,4 @@ C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.ClientManager.BL\obj\Debug\n
 C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.ClientManager.BL\obj\Debug\net10.0\refint\BC.ClientManager.BL.dll
 C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.ClientManager.BL\obj\Debug\net10.0\BC.ClientManager.BL.pdb
 C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.ClientManager.BL\obj\Debug\net10.0\ref\BC.ClientManager.BL.dll
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.ClientManager.BL\obj\Debug\net10.0\BC.ClientManager.BL.sourcelink.json

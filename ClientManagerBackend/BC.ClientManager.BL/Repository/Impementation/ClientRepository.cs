@@ -17,6 +17,7 @@ namespace BC.ClientManager.BL.Repository.Impementation
             _executor = executor ?? throw new ArgumentNullException(nameof(executor));
         }
 
+        #region Public Members
         public async Task<Client> CreateClientAsync(string name, CancellationToken ct = default)
         {
             if (string.IsNullOrWhiteSpace(name)) throw new ArgumentException("Name is required", nameof(name));
@@ -148,5 +149,6 @@ namespace BC.ClientManager.BL.Repository.Impementation
 
             return list;
         }
+        #endregion
     }
 }

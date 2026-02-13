@@ -10,3 +10,4 @@ C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.Persistence\obj\Debug\net10.
 C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.Persistence\obj\Debug\net10.0\refint\BC.Persistence.dll
 C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.Persistence\obj\Debug\net10.0\BC.Persistence.pdb
 C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.Persistence\obj\Debug\net10.0\ref\BC.Persistence.dll
+C:\Dev\BinaryCityAssessment\ClientManagerBackend\BC.Persistence\obj\Debug\net10.0\BC.Persistence.sourcelink.json

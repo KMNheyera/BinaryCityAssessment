@@ -9,7 +9,7 @@ namespace BC.ClientManager.BL.Service.Implementation
 {
     public class ClientService : IClientService
     {
-        
+
         private readonly IClientRepository _clientRepository;
         private readonly ILogger<ClientService> _logger;
 
@@ -22,6 +22,7 @@ namespace BC.ClientManager.BL.Service.Implementation
             _logger = logger;
         }
 
+        #region Public Members
         public async Task<ResponseObject<Client>> CreateClientAsync(string name, CancellationToken ct = default)
         {
             try
@@ -34,12 +35,19 @@ namespace BC.ClientManager.BL.Service.Implementation
                     Success = true
                 };
             }
+            catch (ArgumentException ex)
+            {
+                return new()
+                {
+                    Message = ex.Message
+                };
+            }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error creating client with name {Name}", name);
                 return new ResponseObject<Client>
                 {
-                    Message = "Error creating client with name",
+                    Message = "Error creating client",
                     Success = false
                 };
             }
@@ -66,6 +74,13 @@ namespace BC.ClientManager.BL.Service.Implementation
                 };
 
             }
+            catch (ArgumentException ex)
+            {
+                return new()
+                {
+                    Message = ex.Message
+                };
+            }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error retrieving client with ID {ClientId}", clientId);
@@ -89,6 +104,13 @@ namespace BC.ClientManager.BL.Service.Implementation
                 };
 
             }
+            catch (ArgumentException ex)
+            {
+                return new()
+                {
+                    Message = ex.Message
+                };
+            }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error retrieving clients");
@@ -105,20 +127,26 @@ namespace BC.ClientManager.BL.Service.Implementation
             try
             {
                 var result = await _clientRepository.GetContactsByClientAsync(clientId, ct);
-                return new ResponseObject<IEnumerable<Contact>>
+                return new()
                 {
                     Payload = result,
                     Success = true
                 };
 
             }
+            catch (ArgumentException ex)
+            {
+                return new()
+                {
+                    Message = ex.Message
+                };
+            }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error retrieving contacts for client with ID {ClientId}", clientId);
-                return new ResponseObject<IEnumerable<Contact>>
+                return new()
                 {
                     Message = $"Error retrieving contacts for client with ID {clientId}",
-                    Success = false
                 };
             }
         }
@@ -135,13 +163,19 @@ namespace BC.ClientManager.BL.Service.Implementation
                 };
 
             }
+            catch (ArgumentException ex)
+            {
+                return new()
+                {
+                    Message = ex.Message,
+                };
+            }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error linking contact with ID {ContactId} to client with ID {ClientId}", contactId, clientId);
                 return new ResponseObject<string>
                 {
                     Message = $"Error linking contact with ID {contactId} to client with ID {clientId}",
-                    Success = false
                 };
             }
         }
@@ -151,20 +185,26 @@ namespace BC.ClientManager.BL.Service.Implementation
             try
             {
                 await _clientRepository.UnlinkContactAsync(clientId, contactId, ct);
-                return new ResponseObject<string>
+                return new()
                 {
                     Message = "Contact unlinked successfully",
                     Success = true
                 };
 
             }
+            catch (ArgumentException ex)
+            {
+                return new()
+                {
+                    Message = ex.Message
+                };
+            }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error unlinking contact with ID {ContactId} to client with ID {ClientId}", contactId, clientId);
-                return new ResponseObject<string>
+                return new()
                 {
-                    Message = $"Error inlinking contact with ID {contactId} to client with ID {clientId}",
-                    Success = false
+                    Message = $"Error inlinking contact with ID {contactId} to client with ID {clientId}"
                 };
             }
         }
@@ -174,22 +214,29 @@ namespace BC.ClientManager.BL.Service.Implementation
             try
             {
                 await _clientRepository.UpdateClientAsync(updateClientDto, ct);
-                return new ResponseObject<string>
+                return new()
                 {
                     Message = "Client updated successfully",
                     Success = true
                 };
 
             }
+            catch (ArgumentException ex)
+            {
+                return new()
+                {
+                    Message = ex.Message,
+                };
+            }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error updating client with ID {clientId}", updateClientDto.ClientId);
-                return new ResponseObject<string>
+                return new()
                 {
                     Message = $"Error updating client with ID {updateClientDto.ClientId}",
-                    Success = false
                 };
             }
         }
+        #endregion Public Members
     }
 }

@@ -9,5 +9,6 @@ namespace BC.ClientManager.BL.Repository.Interface
         Task<IEnumerable<Contact>> GetContactsAsync(GetTableDataDto getTableDataDto, CancellationToken ct = default);
         Task<Contact?> GetContactByIdAsync(int contactId, CancellationToken ct = default);
         Task<IEnumerable<Client>> GetClientsByContactAsync(int contactId, CancellationToken ct = default);
+
     }
 }

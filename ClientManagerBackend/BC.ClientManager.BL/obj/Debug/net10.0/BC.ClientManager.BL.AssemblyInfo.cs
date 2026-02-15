@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BC.ClientManager.BL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ffbcf696d07c01b3e18c9c65a2e6e9f6c9d29ef")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b6859393cac15cbcaa4855b968f18dd5a87068b")]
 [assembly: System.Reflection.AssemblyProductAttribute("BC.ClientManager.BL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BC.ClientManager.BL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,6 @@
+@BC.ClientManagerAPI_HostAddress = http://localhost:5117
+
+GET {{BC.ClientManagerAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

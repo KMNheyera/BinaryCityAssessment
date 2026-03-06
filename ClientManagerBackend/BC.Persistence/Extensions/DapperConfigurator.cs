@@ -32,7 +32,7 @@ namespace BC.Persistence.Extensions
 
                 services.AddSingleton<IDbConnectionFactory>(_ => new SqlConnectionFactory(connectionString));
 
-                services.AddSingleton<IDbContext, DbContext>();
+                services.AddScoped<IDbContext, DbContext>();
 
                 return services;
             }

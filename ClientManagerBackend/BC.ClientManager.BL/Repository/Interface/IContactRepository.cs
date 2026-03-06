@@ -7,6 +7,7 @@ namespace BC.ClientManager.BL.Repository.Interface
     {
         Task<Contact> CreateContactAsync(CreateContactDto createContactDto, CancellationToken ct = default);
         Task<IEnumerable<Contact>> GetContactsAsync(GetTableDataDto getTableDataDto, CancellationToken ct = default);
+        Task<int> GetContactsCountAsync(string? searchCriteria, CancellationToken ct = default);
         Task<Contact?> GetContactByIdAsync(int contactId, CancellationToken ct = default);
         Task<IEnumerable<Client>> GetClientsByContactAsync(int contactId, CancellationToken ct = default);
 

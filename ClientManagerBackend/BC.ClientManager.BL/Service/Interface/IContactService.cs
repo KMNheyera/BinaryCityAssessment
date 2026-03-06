@@ -8,6 +8,7 @@ namespace BC.ClientManager.BL.Service.Interface
     {
         Task<ResponseObject<Contact>> CreateContactAsync(CreateContactDto createContactDto, CancellationToken ct = default);
         Task<ResponseObject<IEnumerable<Contact>>> GetContactsAsync(GetTableDataDto getTableDataDto, CancellationToken ct = default);
+        Task<ResponseObject<int>> GetContactsCountAsync(string? searchCriteria, CancellationToken ct = default);
         Task<ResponseObject<Contact>> GetContactByIdAsync(int contactId, CancellationToken ct = default);
         Task<ResponseObject<IEnumerable<Client>>> GetClientsByContactAsync(int contactId, CancellationToken ct = default);
     }

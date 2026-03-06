@@ -7,8 +7,6 @@ namespace BC.ClientManager.BL.Models
         public string Name { get; set; } = string.Empty;
         public string? ClientCode { get; set; }
         public int NumContacts { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
 
         // Optional convenience: display-friendly representation
         public override string ToString() => $"{ClientId}: {Name} ({ClientCode ?? "N/A"}) - Contacts: {NumContacts}";

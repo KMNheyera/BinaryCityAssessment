@@ -54,9 +54,23 @@ namespace BC.ClientManager.BL.Repository.Impementation
 
             var results = await _dbContext.QueryListAsync<Contact>(
                 StoredProcedures.GetContacts,
-                new { PageNumber = getTableDataDto.PageNumber, PageSize = getTableDataDto.PageSize, OrderBy = "Surname", OrderDir = "ASC" },
+                new { PageNumber = getTableDataDto.PageNumber, PageSize = getTableDataDto.PageSize, OrderBy = "FullName", OrderDir = "ASC", SearchCriteria = getTableDataDto.SearchCriteria },
                 commandType: CommandType.StoredProcedure,
                 ct: ct).ConfigureAwait(false);
+
+            return results;
+        }
+
+        public async Task<int> GetContactsCountAsync(string? searchCriteria, CancellationToken ct = default)
+        {
+            var results = await _dbContext
+                .ExecuteScalarAsync<int>(
+                    StoredProcedures.GetContactsCount,
+                    new { SearchCriteria = searchCriteria },
+                    commandType: CommandType.StoredProcedure,
+                    ct: ct
+                 )
+                .ConfigureAwait(false);
 
             return results;
         }

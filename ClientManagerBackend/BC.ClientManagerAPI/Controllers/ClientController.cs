@@ -30,6 +30,10 @@ namespace ClientManagerAPI.Controllers
         [FromQuery] GetTableDataDto request)
             => await _clientService.GetClientsAsync(request);
 
+        [HttpGet("get-clients-count")]
+        public async Task<ResponseObject<int>> GetClientsCountAsync([FromQuery] string? searchCriteria)
+            => await _clientService.GetClientsCountAsync(searchCriteria);
+
         [HttpGet("get-contacts-by-clientid/{clientid}")]
         public Task<ResponseObject<IEnumerable<Contact>>> GetContactsByClientAsync(int clientid)
          => _clientService.GetContactsByClientAsync(clientid);

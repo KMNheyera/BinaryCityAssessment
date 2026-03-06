@@ -65,9 +65,24 @@ namespace BC.ClientManager.BL.Repository.Impementation
 
             var results = await _executor.QueryListAsync<Client>(
                 StoredProcedures.GetClients,
-                new { PageNumber = getTableDataDto.PageNumber, PageSize = getTableDataDto.PageSize, OrderBy = "Name", OrderDir = "ASC" },
+                new { PageNumber = getTableDataDto.PageNumber, PageSize = getTableDataDto.PageSize, OrderBy = "Name", OrderDir = "ASC", SearchCriteria = getTableDataDto.SearchCriteria },
                 commandType: CommandType.StoredProcedure,
                 ct: ct).ConfigureAwait(false);
+
+            return results;
+        }
+
+        public async Task<int> GetClientsCountAsync(string? searchCriteria, CancellationToken ct = default)
+        {
+
+            var results = await _executor
+                .ExecuteScalarAsync<int>(
+                    StoredProcedures.GetClientsCount,
+                    new { SearchCriteria = searchCriteria },
+                    commandType: CommandType.StoredProcedure,
+                    ct: ct
+                )
+                .ConfigureAwait(false);
 
             return results;
         }
@@ -80,7 +95,8 @@ namespace BC.ClientManager.BL.Repository.Impementation
                 StoredProcedures.GetClientById,
                 new { ClientId = clientId },
                 commandType: CommandType.StoredProcedure,
-                ct: ct).ConfigureAwait(false);
+                ct: ct
+             ).ConfigureAwait(false);
 
             return client;
         }

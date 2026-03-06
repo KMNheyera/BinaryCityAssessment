@@ -122,6 +122,28 @@ namespace BC.ClientManager.BL.Service.Implementation
             }
         }
 
+        public async Task<ResponseObject<int>> GetClientsCountAsync(string? searchCriteria, CancellationToken ct = default)
+        {
+            try
+            {
+                var result = await _clientRepository.GetClientsCountAsync(searchCriteria, ct);
+                return new ResponseObject<int>
+                {
+                    Payload = result,
+                    Success = true
+                };
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error retrieving clients count");
+                return new ResponseObject<int>
+                {
+                    Message = "Error retrieving clients count",
+                    Success = false
+                };
+            }
+        }
+
         public async Task<ResponseObject<IEnumerable<Contact>>> GetContactsByClientAsync(int clientId, CancellationToken ct = default)
         {
             try

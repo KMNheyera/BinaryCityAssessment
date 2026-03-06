@@ -145,6 +145,27 @@ namespace BC.ClientManager.BL.Service.Implementation
                 };
             }
         }
+
+        public async Task<ResponseObject<int>> GetContactsCountAsync(string? searchCriteria, CancellationToken ct = default)
+        {
+            try
+            {
+                var result = await _contactRepository.GetContactsCountAsync(searchCriteria, ct);
+                return new ResponseObject<int>
+                {
+                    Payload = result,
+                    Success = true
+                };
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Failed to get contacts count");
+                return new ResponseObject<int>
+                {
+                    Message = "Failed to get contacts count"
+                };
+            }
+        }
         #endregion Public Member
 
         #region Private Member

@@ -25,9 +25,13 @@ namespace ClientManagerAPI.Controllers
          => await _contactService.CreateContactAsync(request);
 
         [HttpGet("get-contacts")]
-        public async Task<ResponseObject<IEnumerable<Contact>>> GetClientsAsync(
+        public async Task<ResponseObject<IEnumerable<Contact>>> GetContactsAsync(
         [FromQuery] GetTableDataDto request)
             => await _contactService.GetContactsAsync(request);
+
+        [HttpGet("get-contacts-count")]
+        public async Task<ResponseObject<int>> GetClientsCountAsync([FromQuery] string? searchCriteria)
+            => await _contactService.GetContactsCountAsync(searchCriteria);
 
         [HttpGet("get-contacts-by-id/{contactid}")]
         public async Task<ResponseObject<Contact>> GetContactByIdAsync(int contactid)
